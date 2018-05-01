@@ -79,7 +79,30 @@ module.exports = {
     "test": {
       "value": false,
       "message": "小程序测试，敬请关注最新微信开发者工具的“测试报告”功能"
-    }
+    },
+      "autoInstall": {
+          when: 'isNotTest',
+          type: 'list',
+          message:
+              'Should we run `npm install` for you after the project has been created? (recommended)',
+          choices: [
+              {
+                  name: 'Yes, use NPM',
+                  value: 'npm',
+                  short: 'npm',
+              },
+              {
+                  name: 'Yes, use Yarn',
+                  value: 'yarn',
+                  short: 'yarn',
+              },
+              {
+                  name: 'No, I will handle that myself',
+                  value: false,
+                  short: 'no',
+              },
+          ],
+      }
   },
   "filters": {
     ".eslintrc.js": "lint",

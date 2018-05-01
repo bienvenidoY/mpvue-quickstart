@@ -5,7 +5,6 @@
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import WXP from "minapp-api-promise"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import "weui-wxss/dist/style/weui.wxss"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import fly from "./utils/fly.js"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#vuex}}
 import store from "./store/index"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}

@@ -10,12 +10,9 @@
 
 <script>
 import { formatTime } from '@/utils/index'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import card from '@/components/card'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 export default {
-  components: {
-    card{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  },
+  components: {},
 
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
