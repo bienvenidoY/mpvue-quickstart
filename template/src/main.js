@@ -4,11 +4,25 @@
 {{/if_eq}}
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import WXP from "minapp-api-promise"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import "weui-wxss/dist/style/weui.wxss"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import fly from "./utils/fly.js"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{#vuex}}
+import store from "./store/index"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{/vuex}}
 
+
+Vue.prototype.$wxp = WXP;
+Vue.prototype.$fly = fly;
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 App.mpType = 'app'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-const app = new Vue(App){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+const app = new Vue(
+{{#vuex}}
+store,
+{{/vuex}}
+...App){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
 app.$mount(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 export default {
