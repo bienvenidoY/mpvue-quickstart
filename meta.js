@@ -76,12 +76,7 @@ module.exports = {
         }
       ]
     },
-    "test": {
-      "value": false,
-      "message": "小程序测试，敬请关注最新微信开发者工具的“测试报告”功能"
-    },
       "autoInstall": {
-          when: 'isNotTest',
           type: 'list',
           message:
               'Should we run `npm install` for you after the project has been created? (recommended)',
@@ -102,7 +97,11 @@ module.exports = {
                   short: 'no',
               },
           ],
-      }
+      },
+    "test": {
+      "value": false,
+      "message": "小程序测试，敬请关注最新微信开发者工具的“测试报告”功能"
+    }
   },
   "filters": {
     ".eslintrc.js": "lint",
